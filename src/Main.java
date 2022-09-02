@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -7,6 +6,54 @@ public class Main {
         task2();
         task3();
         task4();
+        tack5();
+        tack6();
+
+    }
+
+    private static void tack6() {
+        System.out.println("Задание 6");
+
+        Scanner numberOne = new Scanner(System.in);
+        System.out.print("Запишите число: ");
+        int one = numberOne.nextInt();
+
+        Scanner numberTwo = new Scanner(System.in);
+        System.out.print("Запишите число: ");
+        int two = numberTwo.nextInt();
+
+        Scanner numberThree = new Scanner(System.in);
+        System.out.print("Запишите число: ");
+        int three = numberThree.nextInt();
+
+        if (one > two && one > three){
+            System.out.printf("Наибольшее число %d \n", one);
+        } else if (two > one && two > three){
+            System.out.printf("Наибольшее число %d \n", two);
+        } else if (three > one && three > two){
+            System.out.printf("Наибольшее число %d \n", three);
+        }
+
+    }
+
+    private static void tack5() {
+        System.out.println("Задание 5");
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("На аттракционе действует ограничение по возрасту, укажите возраст ребенка: ");
+        int age = in.nextInt();
+        boolean ageOne = age < 5;
+        boolean ageTwo = age >= 5 && age <= 14;
+
+        if (ageOne){
+            System.out.printf("Ребенку %d лет. Ребенок не может кататься на аттракционе.\n", age );
+        } else if (ageTwo){
+            System.out.printf("Ребенку %d лет. " +
+                    "Ребенок может кататься только в сопровождении взрослого. " +
+                    "Если взрослого нет, то кататься нельзя..\n", age );
+        } else {
+            System.out.printf("Ребенку %d лет. Ребенок может кататься без сопровождения взрослого.\n", age );
+        }
 
     }
 
